@@ -22,6 +22,10 @@ Para rodar localmente, abra o arquivo `index.html` no navegador.
 
 ## APK Android
 
-O APK de teste e gerado pelo GitHub Actions no workflow **Build Android APK**.
+O APK de teste esta disponivel no repositorio:
 
-Depois que o workflow terminar, baixe o artefato `consulta-cep-debug-apk` na aba **Actions** do repositorio.
+[`apk/app-debug.apk`](apk/app-debug.apk)
+
+Esse APK e uma versao debug para instalacao manual em Android. No celular, talvez seja necessario permitir a instalacao de apps de fontes desconhecidas.
+
+O APK tambem e gerado automaticamente pelo GitHub Actions no workflow **Build Android APK**.
