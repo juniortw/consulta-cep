@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Consulta CEP</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <section class="search-panel" aria-labelledby="page-title">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M12 22s7-6.1 7-12.2A7 7 0 0 0 5 9.8C5 15.9 12 22 12 22Z"></path>
+              <circle cx="12" cy="9.8" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <h1 id="page-title">Consulta CEP</h1>
+            <p>Encontre endereço, bairro, cidade e estado usando a API ViaCEP.</p>
+          </div>
+        </div>
+
+        <form id="cep-form" class="cep-form" novalidate>
+          <label for="cep">CEP</label>
+          <div class="input-row">
+            <input
+              id="cep"
+              name="cep"
+              type="text"
+              inputmode="numeric"
+              autocomplete="postal-code"
+              placeholder="00000-000"
+              maxlength="9"
+              aria-describedby="status"
+            >
+            <button type="submit">
+              <span>Buscar</span>
+            </button>
+          </div>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="result" class="result" aria-label="Resultado da consulta" hidden>
+        <div class="result-header">
+          <p class="eyebrow">Endereco encontrado</p>
+          <h2 id="result-title"></h2>
+        </div>
+
+        <div class="result-grid">
+          <article>
+            <span>Logradouro</span>
+            <strong id="street"></strong>
+          </article>
+          <article>
+            <span>Bairro</span>
+            <strong id="district"></strong>
+          </article>
+          <article>
+            <span>Cidade</span>
+            <strong id="city"></strong>
+          </article>
+          <article>
+            <span>Estado</span>
+            <strong id="state"></strong>
+          </article>
+          <article>
+            <span>DDD</span>
+            <strong id="ddd"></strong>
+          </article>
+          <article>
+            <span>CEP</span>
+            <strong id="postal-code"></strong>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
